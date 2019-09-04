@@ -1,1 +1,2 @@
-# Buku-Data-Mining
+# Template
+Template untuk buku informatika standar
