@@ -1,37 +1,264 @@
-@misc{susanto2010pengantar,
-  title={Pengantar data mining: mengagali pengetahuan dari bongkahan data},
-  author={Susanto, Sani and Suryadi, Dedy},
-  year={2010},
-  publisher={Penerbit Andi}
-}
+\section{Pengertian \textit{Data Mining}}
+Istilah \textit{data mining} memiliki beberapa padanan, seperti \textit{knowledge discovery} ataupun  \textit{pattern recognition}. Kedua istilah tersebut sebenarnya memiliki ketepatannya masing-masing. Istilah \textit{Knowledge discovery} atau penemuan penegetahuan tepat digunakan karena tujuan utama dari \textit{data mining} memang untuk mendapatkan pengetahuan yang masi tersembunyi di dalam bongkahan data. Istilah \textit{pattern recognition} atau pengenalan pola pun tepat untuk digunakan karena pengetahuan yang hendak digali memang berbentuk pola-pola yang memungkinkan juga masi perlu digali dari dalam bonghkahan data yang tengah diihadapi. Bila dalam tulisa ini digunakan istilah \textit{data mining}. hal ini lebih didasarkan pada lebih populernya istilah tersebut dalam kegiatan penggalian pengetahuan data.\cite{susanto2010pengantar}
 
-@article{tampubolon2013implementasi,
-  title={Implementasi Data Mining Algoritma Apriori pada sistem persediaan alat-alat kesehatan},
-  author={Tampubolon, Kennedi and Saragih, Hoga and Reza, Bobby and Epicentrum, K and Asosiasi, A},
-  journal={Informasi dan Teknologi Ilmiah (INTI)},
-  volume={1},
-  number={1},
-  pages={93--106},
-  year={2013}
-}
 
-@book{vercellis2009business,
-  title={Business intelligence: data mining and optimization for decision making},
-  author={Vercellis, Carlo},
-  year={2009},
-  publisher={Wiley Online Library}
-}
-@inproceedings{cti2017implemetasi,
-  title={Implemetasi k-means clustering pada rapidminer untuk analisis daerah rawan kecelakaan},
-  author={CTI, Brilian Rahmat and Gafar, Agum Agidtama and Fajriani, Nurul and Ramdani, Umar and Uyun, Fitria Rihin and Ransi, Natalis and others},
-  booktitle={Prosiding Seminar Nasional Riset Kuantitatif Terapan 2017},
-  volume={1},
-  number={1},
-  year={2017}
-}
-@article{yuda2014data,
-  title={Data Mining Menggunakan Algoritma Na{\"\i}ve Bayes Untuk Klasifikasi Kelulusan Mahasiswa Universitas Dian Nuswantoro.(Studi Kasus: Fakultas Ilmu Komputer Angkatan 2009).},
-  author={Yuda, Nugroho Septian},
-  journal={Skripsi, Fakultas Ilmu Komputer},
-  year={2014}
-}
+
+\par Jadi apakah sebenarnya data mining itu ? Banyak definisi bafi istilah ini dan belum ada yang dibakukan atau disrpakatai semua pihak. Namun demikian, istilah ini memiliki hakikat \textit{(notion)} sebagai disiplin ilmu yang tujuan utamanya adalah untuk menemukan, menggali, atau menambang pengetahuan dari data atau informasi yang kita miliki. Kegiatan inilah yang menjadi garappan atau perhatian utama dari disiplin ilmu \textit{data mining}
+
+
+\section{Fungsi \textit{Data Mining}}
+\paragraph{} Fungsi atau subkegiatan apa sajakah yang ada dalam \textit{data mining} dalam rangka menemukan, menggali, atau menambang pengetahuan tesebut? terdapat enam fungsi dalam \textit{data ming} yaitu : \cite{tampubolon2013implementasi}
+\begin{enumerate}
+    \item Fungsi deskripsi \textit{(description),}
+    \par Terkadang peneliti dan analisis secara sederhana ingin mencoba mencari cara untuk menggambarkan pola dan kecendrungan yang terdapat dalam data.
+     \item Fungs estimasi \textit{(estimation)}
+     \par Estimasi hampir sama dengan klasifikasi, kecuali variabel target estimasi lebih ke arah numerik dari pada ke arah kategori. 
+      \item Fungsi prediksi\textit{(prediction)}
+      \par Prediksi hampir sama dengan klasifikasi dan estimasi, kecuali bahwa dalam prediksi nilai dari hasil akan ada di masa mendatang. 
+       \item Fungsi klasifikasi\textit{(classification)}
+       \par Dalam klasifikasi, terdapat target variabel kategori. 
+        \item  Fungsi pengelompokan \textit{(classification)}, dan
+       \par  \textit{Clustering} merupakan suatu metode untuk mencari dan mengelompokkan data yang memiliki kemiripan karakteriktik \textit{(similarity)} antara satu data dengan data yang lain. \textit{Clustering} merupakan salah satu metode \textit{data mining} yang bersifat tanpa arahan \textit{(unsupervised)}.
+         \item Fungsi asosiasi \textit{(assosiation)}.
+         \par Tugas asosiasi dalam data mining adalah menemukan atribut yang muncul dalam suatu waktu. Dalam dunia bisnis lebih umum disebut analisis keranjang belanja. 
+         
+     
+\end{enumerate}
+  \par Keenam   fungsi data mining tersebut dapat dipilih menjadi :
+  \begin{enumerate}
+      \item Fungsi minor atau fungsi tambahan, yang meliputi ketiga fungsi yang pertama, yaitu deskripsi, estimaasi, dan prediksi.
+       \item fungsi mayor atau fungsi utama, yang meliputi ketiga fungsi berikutnya, yaitu klasifikasi, pengelompokan, dan asosiasi.
+       
+       
+  \end{enumerate}
+\section{Implementasi \textit{Data Mining} }
+
+\par Implementasi adalah yang bermuara pada
+aktivitas, aksi, tindakan, atau adanya mekanisme
+suatu sistem. Implementasi bukan sekedar aktivitas,
+tetapi suatu kegiatan yang terencana dan untuk
+mencapai tujuan kegiatan. Implementasi adalah
+perluasan aktivitas yang saling menyesuaikan proses
+interaksi antara tujuan dan tindakan untuk mencapai
+serta memerlukan jaringan-pelaksanaan,birokrasiyang-efektif. \cite{tampubolon2013implementasi}
+
+\subsection{Retail and Consumer Products}
+\begin{enumerate}
+    \item \textbf{Segmentasi pelanggan, pemilihan saluran, dan tindakan terbaik berikutnya :}
+  \par Dalam penjualan eceran anda dapat dengan mudah menemukan sebagian besar aplikasi penambangan data untuk penjualan dan pemasaran. Sebuah tipikal pendekatannya adalah dengan menggunakan data tentang pelanggan, termasuk deskripsi pelanggan pembelian dan riwayat transaksi, untuk membuat segmen pelanggan, misalnya berdasarkan klasifikasi tetapi lebih sering didasarkan pada teknik pengelompokan. Pengelompokan itu dapat membangun segmen data-driven jauh lebih dioptimalkan daripada gut-driven A-B-C segmen yang bahkan hari ini sering dapat dilihat dalam praktik. Penugasan pelanggan ke segmen adalah prasyarat penting untuk analisis lebih lanjut, misalnya, untuk memilih pelanggan untuk saluran penjualan atau pemasaran tertentu atau untuk memprediksi mana yang optimal tindakan terbaik berikutnya untuk mendekati pelanggan atau prospek tersebut.
+  
+  \item	\textbf{Pemasaran langsung}
+  
+  \par Bisnis roti dan mentega untuk penambangan data dan salah satunya cerita bagaimana semuanya telah dimulai. Gagasan di balik pemasaran langsung adalah menetapkan biaya untuk berbagai jenis tindakan : Jika saya menghubungi seorang pelanggan dan dia tidak bereaksi, biaya  A (untuk upaya kontak, dll.). Jika dia melakukannya, saya akan mendapatkan beberapa keuntungan B (keuntungan pada dasarnya adalah biaya negatif). Jika saya tidak menghubungi pimpinan dan dia tidak akan bereaksi, ini menghemat biaya A di atas. Tetapi jika saya memutuskan untuk tidak menghubungi pemimpin dan dia akan membeli, ini dapat menyebabkan kerugian besar C. Jadi intinya adalah mengidentifikasi petunjuk-petunjuk itu dengan probabilitas konversi tertinggi untuk kampanye pemasaran tertentu sehingga Anda hanya akan menghubungi kasus-kasus yang paling mungkin hingga batas di mana biaya kontak tidak lagi menghasilkan pendapatan yang cukup tinggi untuk mengkompensasi biaya. Bahkan dengan munculnya e-mail, pemasaran langsung diperlukan, "biaya" di sini mungkin bahwa penerima sudah bosan dengan terlalu banyak spam dan mungkin memilih keluar, jadi kami menggunakan petunjuk.
+  
+  \item \textbf{Rekomendasi, \textit{cross-selling}, dan penjualan tinggi}
+    \par Satu lagi kisah sukses besar dari \textit{data mining.} Setiap orang yang telah membeli buku di Amazon telah menemukan hasil yang disebut sistem rekomendasi: "Orang-orang yang membeli buku ini juga membeli ITU." Pada pandangan pertama, jenis masalah ini mungkin tidak terlihat terlalu rumit: untuk setiap item, cukup cari yang sudah sering dibeli bersama dengan yang pertama. Masalahnya muncul dengan tingginya jumlah barang yang tersedia dan tingginya jumlah transaksi yang biasanya tersedia dalam retail dan \textit{e-commerce. }Sangat tidak mungkin untuk membuat perhitungan untuk semua kombinasi yang mungkin terjadi dan oleh karena itu kami membutuhkan algoritma yang memandu pencarian kami ke arah yang paling menjanjikan. Kami menyebut kombinasi yang menjanjikan itu "frequent item sets" dan setelah kami menemukan set itu, kami mungkin ingin merekomendasikan item lain dari set tersebut jika yang pertama ditambahkan ke troli. Pendekatan ini disebut\textit{ cross-selling} dan mungkin melengkapi atau bahkan menggantikan pendekatan\textit{ cross-selling} tradisional berdasarkan aturan manual. \textit{Loosely connected }ini adalah penjualan di mana kami mencoba mengidentifikasi pelanggan yang cenderung membeli produk bernilai lebih tinggi atau jumlah yang lebih besar.
+    
+    \item	\textbf{Nilai pelanggan seumur hidup }
+    \par Sistem tradisional untuk intelijen bisnis berdasarkan pendekatan OLAP sangat bagus untuk menjawab pertanyaan seperti "siapa pelanggan yang membeli paling sejauh ini" atau "berapa pendapatan yang dihasilkan dengan 10 pelanggan teratas saya di masa lalu". Meskipun ini tanpa diragukan informasi penting, sayangnya itu juga hanya mencerminkan masa lalu. Pelanggan yang sebelumnya baik mungkin berubah ke pemasok lain atau keluar karena alasan lain, dan fakta bahwa pelanggan telah menciptakan banyak pendapatan sejauh ini tidak berarti ini akan berlanjut juga di masa depan. Alih-alih menganalisis nilai historis pelanggan, banyak organisasi sekarang beralih untuk memprediksi bagaimana pelanggan akan berkembang di masa depan dan berapa nilai total pelanggan seumur hidup mereka untuk memandu upaya penjualan dan pemasaran mereka. Metode analitik prediktif membantu untuk mengidentifikasi siklus nilai pelanggan yang khas serta untuk menetapkan pelanggan dan mengarah ke siklus tersebut dan menentukan di negara mana dalam siklus mereka.
+\end{enumerate}
+
+\subsection{Jasa Keuangan}
+\begin{enumerate}
+    \item \textbf{Deteksi penipuan}
+    \par Deteksi penipuan sering digunakan dalam industri jasa keuangan tetapi tidak hanya di sana. Ide dasarnya adalah agar dapat mendeteksi kegiatan penipuan yang di antaranya adalah set transaksi yang sangat besar dengan metode dari analytics prediktif. Kemungkinan pendekatan meliputi deteksi \textit{outliers} atau pemodelan kasus "normal" terhadap kasus-kasus "penipuan" dan menggunakan model ini untuk transaksi baru agar dapat memeriksa apakah mereka jatuh ke dalam segmen penipuan.
+    \item \textbf{Pencegahan \textit{churn}}
+    
+\par Menganggap perusahaan asuransi anda memiliki kontrak dengan salah satu pelanggan anda. Kasus optimal untuk asuransi anda adalah bahwa kontrak ini tetap dan anda menjaga hubungan yang berkelanjutan dengan pelanggan anda. Sayangnya, beberapa pelanggan memutuskan untuk keluar dari kontrak karena berbagai alasan dan anda ingin tahu sebelumnya untuk pelanggan mana ini akan terjadi dengan kemungkinan tertinggi dalam waktu dekat. Ini persis ide di balik pencegahan\textit{ chu}rn: membuat model prediksi menghitung probabilitas bahwa pelanggan kemungkinan akan segera keluar dari kontrak sehingga anda bisa \textit{proaktif}, terlibat dengan mereka, menawarkan insentif, dll. Selain industri keuangan, pencegahan churn juga bisa menjadi sering ditemukan di industri ritel, \textit{e-commerce}, atau telekomunikasi antara lain.
+
+\item \textbf{\textit{Sentiment analysis}}
+\par Analisis sentimen sama sekali tidak terhubung dengan industri keuangan tetapi kami telah melihatnya sangat sering di akhir-akhir ini. Anda juga dapat menemukan banyak analisis sentimen dalam industri seperti barang-barang konsumsi, ritel, telekomunikasi, dan ilmu kehidupan. Gagasan di balik analisis sentimen adalah untuk terhubung ke ribuan sumber online di \textit{web,} mengumpulkan pernyataan tentang merek atau produk anda, dan menganalisisnya dengan analisis teks sehubungan dengan nada suara atau sentimen mereka. Anda dapat mengidentifikasi bagaimana sentimen berubah dari waktu ke waktu dan mengukur keberhasilan pemasaran atau PR dengan ini atau anda bisa mendapatkan wawasan baru tentang cara meningkatkan produk anda. Jika anda menggabungkan ini dengan analisis jaringan, Anda bahkan dapat mendeteksi pemimpin opini kunci dan melihat bagaimana mereka memengaruhi kelompok teman sebaya mereka
+
+\item \textbf{Analisis Perdagangan}
+\par Jika anda berdagang, membangun portofolio, atau menyiapkan penawaran, ide alami adalah menghitung tingkat keberhasilan keputusan anda dengan bantuan analitik prediktif. Secara umum, anda dapat menganalisis peluang perdagangan potensial dengan melihat data pasar atau memeriksa pasar untuk aktivitas perdagangan yang menunjukkan tren yang muncul. Akhir-akhir ini, banyak analis menggabungkan metode yang lebih tradisional seperti analisis deret waktu dengan algoritma perdagangan perilaku atau bahkan analisis sentimen.
+
+\item  \textbf{Manajemen risiko}
+\par Ini adalah contoh lain yang dilakukan dalam industri jasa keuangan yang juga dapat diterapkan pada banyak industri lain juga, terutama ketika menyangkut manajemen rantai pasokan, misalnya di bidang manufaktur, atau untuk logistik dan transportasi. Penambangan data dan analisis prediktif dapat digunakan untuk menyelesaikan berbagai masalah yang terkait dengan manajemen risiko, termasuk deteksi kesalahan dan kuantifikasi, tinjauan unit atau audit internal, mendeteksi penipuan (lihat di atas), mengidentifikasi pemasok dengan probabilitas kegagalan tertinggi, mengukur risiko pembayaran, dan kredit mencetak gol.
+
+\end{enumerate}
+
+\subsection{Telekomunikasi dan Media}
+\begin{enumerate}
+    \item\textbf{ Analisis Jaringan}
+    \par Industri telekomunikasi sebenarnya sudah merupakan pendorong untuk banyak bidang aplikasi yang dijelaskan termasuk pencegahan \textit{churn}, saluran seleksi, pemasaran langsung, nilai seumur hidup pelanggan, dan analisis sentimen. Salah satu temuan yang menarik adalah bahwa industri telekomunikasi juga dapat memanfaatkan dari sumber data lain yang menggambarkan interaksi sosial antara pelanggan mereka. Untuk contoh, panggilan antar pelanggan mungkin menggambarkan hubungan sosial mereka dan menggambarkan koneksi tersebut di samping perilaku penggunaan dan data transaksional dapat dengan mudah membantu meningkatkan model untuk pencegahan churn dan lainnya. Jika pendapat kunci leader memutuskan untuk berubah ke penyedia lain, orang lain di dipengaruhi oleh orang ini mungkin menunjukkan probabilitas yang lebih tinggi untuk juga keluar dari kontrak mereka juga.
+    
+    \item \textbf{	Otomatisasi proses layanan pelanggan}
+    
+    \par Banyak perusahaan yang menghabiskan upaya untuk meningkatkan dukungan pelanggan dan mereka benar untuk melakukannya. Jika seorang pelanggan senang dengan dukungan dalam hal pengalaman yang sebelumnya buruk, mungkin pelanggan ini berubah menjadi seorang pelanggan yang setia dari sebelumnya. Salah satu faktor paling penting yang berpengaruh untuk kepuasan dengan layanan pelanggan adalah jumlah waktu antara saat permintaan dikirim dan ketika jawabannya disampaikan Analisis teks dapat membantu menjawab pertanyaan dengan blok teks yang dipilih secara otomatis atau setidaknya dengan menetapkan permintaan ke karyawan yang tepat tanpa penundaan lebih lanjut. Ini adalah contoh lain yang tidak hanya berlaku untuk industri telekomunikasi tetapi untuk semua bisnis yang berfokus pada pelanggan dengan banyak kontak pelanggan.
+\end{enumerate}
+
+\subsection{Manufacturing, Construction, and Electronics }
+\begin{enumerate}
+    \item\textbf{\textit{ Predictive maintenance}}
+    
+\par Analisis prediktif dapat menganalisis data sensor langsung dari proses produksi dan mesin untuk menentukan apakah ada masalah yang akan terjadi dengan mesin yang kemungkinan akan menyebabkan masalah segera. Banyak masalah memanifestasikan diri pada tahap awal sudah dengan beberapa jenis pesan kesalahan atau perilaku berubah pada akhirnya mengarah ke data sensor yang diubah. Analis dapat membuat model prediksi berdasarkan peristiwa kegagalan di masa lalu dan data historis sebelum itu kegagalan. Model seperti itu kemudian dapat digunakan untuk memprediksi jika kegagalan baru kemungkinan terjadi sebelum interval perawatan berikutnya dan harus ditangani lebih baik sekarang daripada nanti. Model-model itu juga bisa memberikan wawasan tentang alasan kegagalan itu dan karenanya memberikan analisis akar permasalahan.
+
+\item \textit{	\textbf{Patent text analysis}}
+\par Contoh lain yang sebenarnya juga dapat diterapkan untuk industri lain adalah analisis teks paten. Ini paling sering dilakukan dengan metode berasal dari analisis teks dan kesamaan teks karena salah satu dari dua alasan: baik perusahaan ingin mendeteksi tren yang muncul sesegera mungkin atau ingin dipersiapkan untuk kasus-kasus di mana paten sendiri diserang.
+
+\item \textit{\textbf{Supply chain management
+}}
+
+\par Ada beberapa bidang aplikasi untuk analitik prediktif di sekitar manajemen rantai pasokan. Kami sudah membahas manajemen risiko di atas, untuk manajemen rantai pasokan, ini bisa berarti menentukan pemasok mana yang dimiliki risiko kegagalan tertinggi dan apa dampak yang diharapkan jika terjadi kegagalan. Analisis prediktif juga dapat digunakan untuk perkiraan permintaan dan karenanya untuk meningkatkan logistik tetapi juga negosiasi tepat waktu dengan pemasok. Dan akhirnya teknik-teknik itu bisa digunakan untuk memprediksi harga dan perubahannya dalam rantai pasokan, sekali lagi memungkinkan keputusan proaktif dan terinformasi dengan baik. 
+
+\item 	\textit{\textbf{Optimizing throughput rates}}
+
+\par Industri manufaktur bahkan sudah mulai menghubungkan penambangan data dan analisis prediktif dengan pusat kendali pabrik mereka. Berdasarkan data sensor yang menggambarkan proses produksi itu sendiri dan juga input untuk proses ini, model-model tersebut menemukan pengaturan optimal untuk proses secara real time di untuk mengoptimalkan kualitas, atau tingkat\textit{ throughput} yang lebih tinggi, atau bahkan keduanya pada saat yang sama waktu. Dalam beberapa kasus, penting untuk tidak meninggalkan rentang parameter tertentu Agar tidak merusak mesin yang terlibat dan bahkan ini mungkin dilakukan dengan bantuan analitik canggih
+
+\item \textit{\textbf{Quality assurance}}
+\par Bidang aplikasi lain adalah prediksi kualitas hasil dari suatu proses bahkan sebelum proses penuh telah selesai. Itu prediksi model menggunakan data yang menggambarkan proses dan menggabungkannya dengan menggambarkan data sensor keadaan saat ini dari suatu item untuk memprediksi kualitas hasil akhir. Kita bahkan telah melihat kasus-kasus di mana barang itu dikeluarkan dari penyempurnaan lebih lanjut, yang akan baru saja menimbulkan biaya tambahan untuk suatu produk yang tidak akan dijual karena kualitas pembatasan pula. Terkait erat dengan ini adalah pertanyaan seperti deteksi anomali dan mengapa item tertentu memiliki kualitas yang lebih rendah, maka analisis akar penyebab.
+\end{enumerate}
+
+\subsection{Konsep Dan Contoh}
+\paragraph{}Penataan karakteristik dari pelanggan anda menggunakan atribut, seperti yang sudah diperkenalkan sebelumnya, membantu kita untuk mengatasi masalah sedikit lebih analitis. Dengan cara ini, kami memastikan bahwa setiap pelanggan diwakili dengan cara yang sama. Dalam arti tertentu, kami mendefinisikan jenis atau konsep "pelanggan", yang sangat berbeda dari konsep lain seperti \textit{"falling articles"} di mana pelanggan biasanya tidak memiliki sifat material dan \textit{falling articles} hanya akan jarang membeli dalam kelompok produk 1. Hal yang penting bahwa, untuk setiap masalah dalam buku ini (atau bahkan yang anda alami dalam latihan), yang anda harus lakukan pertama kali adalah menentukan konsep mana yang anda hadapi dan atribut apa yang didefinisikan olehnya.
+
+\paragraph{} Sekilas telah kami singgung sebelumnya, dengan menunjukkan nama atribut, alamat, sektor, dll, dan khususnya transaksi pembelian dalam kelompok produk individu, bahwa konsep objek "pelanggan" dijelaskan oleh atribut ini. Namun konsep ini secara keseluruhan relatif abstrak dan belum ada kehidupan yang disuntikkan atau dikemukakan ke dalamnya. Meskipun sekarang kami tahu dengan cara apa kami dapat  menggambarkan pelanggan, kami belum melakukan ini untuk pelanggan tertentu. Mari kita lihat atribut dari pelanggan berikut, misalnya:
+
+\begin{itemize}
+    \item Prototipe diterima secara positif: ya
+    \item Miller Systems Inc.
+\item Alamat: 2210 Massachusetts Avenue, 02140 Cambridge, MA, USA
+\item Sektor: Manufaktur
+\item Subsektor: Mesin pembengkok pipa
+\item Jumlah karyawan: 
+kurang dari 1000
+\item Jumlah pembelian dalam kelompok produk 1: 5
+\item Jumlah pembelian dalam kelompok produk 2: 0 
+
+\end{itemize}
+
+\paragraph{}Kami mengatakan bahwa pelanggan spesifik diatas adalah contoh untuk konsep "pelanggan" kami. Setiap contoh dapat dicirikan oleh atributnya dan memiliki nilai konkret untuk setiap atribut yang dapat dibandingkan dengan contoh lainnya. Dalam kasus yang dijelaskan di atas, Miller Systems Inc. juga merupakan contoh pelanggan yang berpartisipasi dalam penelitian kami. Oleh karena itu, ada nilai yang tersedia untuk atribut target kami "\textit{prototipe} diterima secara positif?" \textit{Miller Systems Inc}. senang dan memiliki "ya" sebagai nilai atribut di sini, jadi kami juga berbicara tentang contoh positif. Secara logis, ada juga contoh negatif dan contoh yang tidak memungkinkan kami membuat pernyataan tentang atribut target.
+
+
+\section{Peran Atribut}
+\paragraph{} Kita sekarang  berkenalan dengan dua jenis atribut yang berbeda, yaitu, yang mendeskripsikan contoh sederhana dan yang mengidentifikasi contoh secara terpisah. Dengan demikian atribut dapat mengadopsi peran yang berbeda. Kami telah memperkenalkan peran “label” untuk atribut yang mengidentifikasikan contoh dengan cara apapun dan yang harus di prediksi untuk contoh yang baru yang belum di rincikan dengan sedemikian rupa. Dalam sekenario yang kami jelaskan diatas, label tetap dideskripsikan (jika ada) karakteristik apakah prototipe diterima secara positif.
+
+\paragraph{}Demikian juga, misalnya ada contoh peran, atribut yang terkait berfungsi dengan jelas mengidentifikasikan contoh yang bersangkutan. Dalam hal ini atribut mengadopsi peran  pengidentifikasi dan ini disebut ID singkatnya. Anda akan menemukan atribut nama ID dalam\textit{ Software RapidMiner}.  Dalam  sekenario pelanggan kami, atribut “nama” dapat mengadopsi peran pengidentifikasian tersebut. 
+
+\paragraph{} Bahkan ada lebih banyak peran, seperti yang memiliki atribut yang menunjukan bobot dari contoh yang berkenaan dengan label. Dalam hal ini peran memiliki nama Bobot. Atribut tanpa peran khusus, yaitu, mereka yang menggambarkan contoh-contoh, sering di panggil reguler atribut dan hanya meninggalkan peran yang di tunjukan dalam banyak kasus. Terlepas dari yang anda miliki opsi yang terdapat pada \textit{RapidMiner} untuk mengalokasikan peran anda sendiri dan karena itu anda mengidentifikasi atribut secara terpisah dalam maknanya. Harap di perhatikan bahwa untuk sebagian besar tugas  data mining di \textit{RapidMiner}, atribut reguler bisa digunakan sebagai input ke metode, misalnya, untuk membuat model yang memprediksi atribut dengan label peran.
+
+\section{Syarat Fundamental }
+\paragraph{} Sejauh ini kami berhasil mendapatkan ide umum tentang \textit{data mining }dan tentang analisis prediktif. Ditambah kita memiliki perasaan yang baik bahwa teknologi sangat berguna diberbagai bidang aplikasi pada semua industri. Berikut ini, kami akan memperkenalkan beberapa istilah mendasar yang akan mempermudah kita nanti dalam berurusan dengan masalah pada buku ini. Anda akan menemukan istilah-istilah ini lagi dan lagi dalam perangkat lunak \textit{RapidMiner}, yang berarti ada baiknya mengenal istilah-istilah yang digunakan bahkan jika Anda sudah seorang analis data yang berpengalaman. 
+
+\paragraph{}Pertama-tama, kita dapat melihat dua contoh di bagian sebelumnya, yaitu lemparan koin dan kaca jatuh, yang memiliki kesamaan. Dalam diskusi kami tentang apakah kami mampu memprediksi akhir dari situasi masing-masing, kami menyadari bahwa mengetahui faktor-faktor pengaruh seakurat mungkin, seperti sifat material atau sifat tanah, adalah hal penting. Dan bahkan seseorang dapat mencoba untuk menemukan jawaban atas pertanyaan apakah buku ini akan membantu Anda dengan mencatat karakteristik Anda, pembaca, dan menyelaraskan dengan hasil survei dari beberapa pembaca sebelumnya. Karakteristik pembaca dapat diukur, misalnya, latar belakang pendidikan orang bersangkutan, sesuai dengan statistik, preferensi untuk buku-buku lain yang mungkin serupa, dan fitur yang lebih lanjut, yang bisa kita ukur sebagai bagian dari survei kami. Jika sekarang kita mengetahui karakteristik dari 100 pembaca seperti itu dan memiliki indikasi apakah Anda menyukai buku atau tidak, maka proses selanjutnya akan hampir sepele. Kami juga akan mengajukan pertanyaan kepada Anda dari survei kami dan kemudian mengukur fitur yang sama dengan cara ini, misalnya menggunakan penalaran analogi seperti yang dijelaskan di atas, menghasilkan prediksi yang dapat diandalkan tentang selera pribadi Anda. "Pelanggan yang membeli buku ini juga membeli 
+
+\subsection{Atribut dan Atribut Sasaran }
+\par Apakah koin, pelanggan, atau proses produksi, terdapat seperti yang disebutkan sebelumnya, pertanyaan pada semua skenario mengenai karakteristik atau fitur dari situasi masing-masing. Kami akan selalu berbicara tentang atribut berikut ini ketika kami bermaksud menjelaskan factor-faktor seperti skenario. Ini juga merupakan istilah yang selalu digunakan dalam perangkat lunak RapidMiner ketika fitur penjabaran tersebut seperti muncul. Ada banyak sinonim untuk istilah ini dan tergantung pada latar belakang Anda sendiri, mungkin Anda telah menemukan istilah yang berbeda, bukan “atribut”, misalnya:
+
+\begin{itemize}
+    \item karakteristik,
+ \item	fitur, 
+ \item	pengaruh faktor (atau hanya faktor), 
+ \item	indikator, 
+ \item	sinyal.
+
+\end{itemize}
+
+\paragraph{} Kita telah melihat bahwa deskripsi dengan atribut-atribut itu memungkinkan untuk proses dan juga untuk situasi. Hal ini diperlukan untuk deskripsi proses teknis sebagai contoh dan pemikiran tentang kaca jatuh tidak terlalu jauh dari sini. Jika saja memungkinkan untuk memprediksi hasil dari suatu situasi, maka mengapa tidak dengan kualitas komponen yang diproduksi juga? Atau kegagalan yang akan terjadi pada mesin? proses lain atau situasi yang tidak memiliki referensi teknis juga dapat dijelaskan dengan cara yang sama. Bagaimana saya bisa memprediksi keberhasilan penjualan atau promosi pemasaran? Artikel mana yang akan dibeli oleh pelanggan selanjutnya? Berapa banyak lagi kecelakaan yang mungkin harus ditanggung oleh perusahaan asuransi untuk pelanggan atau kelompok pelanggan tertentu.
+
+\paragraph{} Kita akan menggunakan semacam skenario pelanggan untuk memperkenalkan istilah penting yang lainnya. Pertama, karena manusia terkenal baik dalam memahami contoh-contoh tentang manusia lain dan kedua, karena masing-masing perusahaan mungkin memiliki informasi, yaitu atribut, mengenai pelanggan mereka dan sebagian besar dari pembaca bisa menghubungkan dengan contohnya langsung. Atribut-atribut tersedia sebagai minimum, yang hampir setiap perusahaan simpan / jaga tentang pelanggan, dimisalkan data alamat dan informasi untuk produk atau jasa yang mana yang telah dibeli oleh pelanggan. Anda akan terkejut, perkiraan apa yang dapat dibuat bahkan dari sejumlah kecil atribut yang ada.
+
+\paragraph{} Mari kita lihat sebuah contoh (yang memang dibuat-buat). Biar kita asumsikan bahwa Anda bekerja di perusahaan yang ingin menawarkan produk kepada pelanggannya di masa depan, yang lebih sesuai dengan kebutuhan mereka. Dalam studi pelanggan yang hanya terdiri dari 100 pelanggan Anda, beberapa kebutuhan menjadi jelas, yang dimana 62 dari 100 pelanggan ini berbagi semua hal yang sama. Departemen penelitian dan pengembangan Anda langsung bekerja dan mengembangkan produk baru dalam waktu singkat, yang akan memenuhi kebutuhan baru ini dengan lebih baik. Sebagian besar dari 62 pelanggan dengan kebutuhan profil yang relevan terkesan dengan prototipe yang ada dalam kasus apa pun, meskipun sebagian besar peserta penelitian yang tersisa hanya menunjukkan minat kecil seperti yang diharapkan. Namun, total 54 dari 100 pelanggan dalam penelitian ini mengatakan bahwa mereka menemukan produk baru itu bermanfaat. karenanya, prototipe dievaluasikan berhasil dan masuk kedalam produksi-sekarang hanya tinggal pertanyaan tentang "bagaimana" yang belum terjawab, dari pelanggan anda yang sudah ada atau bahkan dari pelanggan berpotensi lainnya, Anda akan memilih persis pelanggan yang dengannya upaya pemasaran dan penjualan berikutnya menjanjikan kesuksesan terbesar. Karena itu, Anda ingin mengoptimalkan efisiensi Anda di bidang ini, yang berarti secara khusus mengesampingkan upaya tersebut sejak awal yang tidak mungkin mengarah kepada pembelian. Tetapi bagaimana itu bisa dilakukan? Kebutuhan akan solusi alternatif dan dengan demikian minat terhadap produk baru akan muncul dalam studi pelanggan pada sebagian pelanggan Anda. Melakukan studi ini untuk semua pelanggan anda sangatlah mahal sehingga menjadikan pilihan ini tertutup untuk anda. Dan disinilah data mining dapat membantu. Mari kita lihat terlebih dahulu kedalam sebuah seleksi kemungkinan sebuah atribut tentang pelanggan Anda.
+
+\begin{itemize}
+    \item 	Nama 
+ \item	Alamat 
+ \item	Sektor 
+ \item	Subsektor 
+ \item	Jumlah Karyawan 
+ \item	Jumlah pembelian dalam kelompok produk 1 
+ \item	Jumlah pembelian dalam kelompok produk 2
+
+\end{itemize}
+
+\paragraph{} Jumlah pembelian dalam kelompok produk yang berbeda berarti transaksi di kelompok produk yang Anda telah dibuat dengan pelanggan di masa lalu. Disana tentu saja bisa lebih atau kurang atau bahkan sama sekali berbeda atribut didalam kasus Anda, tetapi ini tidak relevan pada tahap ini. Mari kita berasumsi bahwa Anda memiliki informasi yang tersedia mengenai atribut-atribut ini untuk setiap satu dari pelanggan Anda. Lalu terdapat atribut lain yang bias kita lihat untuk scenario konkret kita: Apakah pelanggan menyukai prototipenya atau tidak. Atribut ini tentu saja hanya tersedia untuk 100 pelanggan dari penelitian; informasi pada atribut ini tidak diketahui untuk orang lain. Namun demikian, kami juga menyertakan atribut dalam daftar atribut kita:
+
+\begin{itemize}
+    \item 	Prototipe positif yang diterima?
+ \item	Nama 
+ \item	Alamat 
+ \item	Sektor 
+ \item	Subsektor 
+ \item	Jumlah Karyawan 
+ \item	Jumlah pembelian dalam kelompok produk 1 
+ \item	Jumlah pembelian dalam kelompok produk 2
+
+\end{itemize}
+
+\paragraph{} Jika kita asumsikan Anda memiliki ribuan pelanggan secara total, maka Anda bisa mengindikasikan apakah dari 100 ini mengevaluasi prototipe secara positif atau tidak. Anda belum tahu apa yang orang lain pikirkan, tetapi Anda ingin tahu! Atribut “prototipe positif yang diterima” juga mengadopsi peran khusus, karena mengidentifikasi setiap salah satu pelanggan Anda dalam kaitannya dengan pertanyaan saat ini. Oleh karena itu kami juga menyebut atribut khusus sebagai \textbf{label} dengan pelanggan Anda dan mengidentifikasi mereka seperti label merek pada kemeja atau bahkan catatan di papan. Anda juga akan menemukan atribut yang mengadopsi peran khusus ini di RapidMiner dengan nama “label”. Tujuan dari upaya kami adalah untuk mengisi atribut tertentu tersebut untuk jumlah total semua pelanggan. Oleh sebab itu kita mungkin juga berbicara tentang \textbf{atribut target }bukan istilah “label” karena target kami adalah untuk menciptakan model yang memprediksi atribut khusus dari nilai-nilai semua orang. Anda juga akan sering menemukan\textbf{ variabel target} didalam literatur, yang berarti hal yang sama.
+
+\subsection{Tipe Nilai}
+\paragraph{} Serta berbagai peran atribut yang berbeda, ada juga dua karakteristik atribut yang bernilai lebih dekat. Contoh \textit{Miller System Inc}. di atas menetapkan masing-masing nilai atribut yang berbeda, misalnya \textit{"Miller Systems Inc}." untuk atribut "Nama" dan nilai "5" untuk jumlah pembelian sebelumnya dalam kelompok produk "1", dilain pihak indikasi angka harus sesuai. Kami menyebut indikasi apakah nilai atribut harus dalam teks atau angka tipe nilai atribut tersebut.
+
+\paragraph{} Dalam bab-bab selanjutnya kita akan berkenalan dengan banyak jenis nilai yang berbeda dan melihat bagaimana ini juga akan berubah menjadi jenis lain. Untuk saat ini kita hanya perlu tahu bahwa ada jenis nilai yang berbeda untuk atribut dan bahwa kita membahas tentang nilai jenis teks dalam kasus \textit{free text}, jenis nilai numerik dalam kasus nomor dan jenis nilai nominal dalam kasus tersebut hanya ada beberapa nilai yang memungkinkan (seperti dengan dua kemungkinan \ya dan \tidak untuk atribut target).
+
+\paragraph{} Harap dicatat bahwa dalam contoh tersebut jumlah karyawan, walaupun benar-benar dari tipe numerik, lebih memilih didefinisikan sebagai nominal, sejak kelas dengan ukuran, yaitu />1000 digunakan bukan dengan indikasi yang tepat seperti 1250 karyawan.
+
+\paragraph{} Kita ingin meringkas situasi awal kita sekali lagi. Kami mempunyai konsep “customer” yang tersedia, yang akan kami jelaskan dengan beberapa atribut:
+
+\begin{itemize}
+    \item 	Prototipe diterima secara positif ? [Label; Nominal]
+\item 	Nama [Text]
+\item 	Alamat [Text]
+\item 	Sektor [Nominal]
+\item 	Sub sektor [Nominal]
+\item 	Jumlah karyawan [Nominal]
+\item 	Jumlah pembelian pada group 1 [Numerical]
+\item 	Jumlah pembelian pada group 2 [Numerical] 
+
+\end{itemize}
+
+\paragraph{}  Pada \textit{attribute} “Prototipe diterima secara positif ?” memiliki peran khusus di antara atribut target atau label disini. Atribut target memiliki value dengan type nominal, yang berarti hanya beberapa karakteristik (dalam kasus ini “ya” dan “tidak”) untuk dapat diterima. Sebenarnya itu bahkan binominal, karena hanya ada dua karakter yang berbeda diizinkan. Semua atribut yang tersisa tidak memiliki peran khusus, mereka re\textit{gular dan memiliki jenis value }Numerical atau\textit{ tex}t. Definisi berikut ini sangatlah penting, oleh karena itu memainkan peran penting dalam analisis data professional yang sukses: suatu konsep, yang disebut dengan meta data, karena telah mewakili data tentang data yang sebenarnya.
+
+\paragraph{}  Perusahaan fiktif kita memiliki sejumlah contoh untuk konsep \textit{“customer”} kita, informasi yang enterprise telah disimpan secara individu ke dalam \textit{databse customer}. Tujuannya sekarang adalah untuk menghasilkan intruksi prediksi dari contoh-contoh yang tersedia dalam informasi mengenai sasaran sasaran, yang menentukan bagi kita apakah para \textit{customer} yang tersisa akan lebih cenderung menerima \textit{prototyp}e yang positif atau menolaknya. Pencarian petunjuk semacam itu adalah salah satu tugas yang dapat dilakukan dengan \textit{data mining}.
+
+\paragraph{Namun, penting di sini bahwa informasi untuk atribut dari masing-masing contoh ada dalam bentuk terurut, sehingga metode data mining dapat mengaksesnya melalui komputer. Setiap atribut menentukan kolom dan masing-masing contoh dengan value atribut yang berbeda sesuai dengan baris tabel ini. Untuk skenario kami, dapat dilihat pada gambar}
+ 
+\section{Pengenalan}
+
+\paragraph{}  Saat ini, analitik adalah topik yang sangat penting dan mempengaruhi hampir semua tingkatan dalam organisasi \textit{modern.} Analisis juga digunakan oleh banyak peneliti berbasis data. Data dikumpulkan dan dianalisis, dan hasil karya analitik ini membuktikan hipotesis kami atau memberikan wawasan baru.
+
+\paragraph{} Ketika kita berbicara tentang analitik dalam buku ini, kita merujuk pada apa yang banyak orang sebut "analitik lanjut". Bidang ini mencakup teknologi yang dikenal dari statistik maupun dari ilmu komputer. Bukankah ini hanya statistik yang dilakukan oleh komputer? Sejauh ini tidak! Statistik sering berurusan dengan pertanyaan jika hipotesis dapat dibuktikan dengan uji statistik menggunakan sampel data yang kecil tetapi \textit{representatif.} Meskipun ini yang paling penting, bahkan lebih berguna untuk mencampurkan ide-ide ini dengan algoritma dari ilmu komputer untuk memastikan bahwa metode yang kita bicarakan akan dapat meningkatkan dan menganalisis bahkan set data terbesar.
+
+\paragraph{} Dan saya melihat perbedaan lain: statistik tradisional sering mengharuskan analis membuat model atau hipotesis tepat pada awal proses analisis. Setelah membuat model seperti itu, parameter model diestimasi atau penerapan model ini dibuktikan melalui uji statistik. Mungkin ini karena saya malas, tetapi saya sebenarnya tidak terlalu menyukai ide ini: Mengapa saya harus melakukan pekerjaan yang secara manual dapat ditangani oleh komputer? Dalam pengertian analisis manual ini, analisis statistik jauh lebih terhubung dengan pemrosesan analitik online (OLAP) daripada dengan "analitik lanjutan": Di dunia OLAP, orang mencoba menelusuri data mereka untuk menemukan pola yang menarik dan alasan dalam data yang lebih dalam tingkat sendiri. Baik, tapi sekali lagi saya pikir ini adalah pendekatan yang salah untuk menyelesaikan.
+
+   \textit{ RapidMine}r: Data Mining Menggunakan Kasus dan Aplikasi Analisis Bisnis
+   
+   \paragraph{}  masalah mendasar terutama karena dua alasan: Pertama, orang cenderung hanya melihat apa yang mereka cari. Sebagian besar analis memiliki beberapa harapan sebelum mereka mulai dan mencoba untuk bekerja selama diperlukan pada data untuk membuktikan pendapat mereka. Kedua, OLAP sekali lagi merupakan pekerjaan yang cukup menjemukan Saya pribadi percaya bahwa komputer jauh lebih baik untuk itu. Apakah saya sudah menyebutkan bahwa saya cukup malas dalam hal ini? Saya lebih suka menggambarkan diri saya sebagai "tidak memihak" dan \textit{"efisien"}.
+   
+   \paragraph{}       Jangan salah paham: statistik dan metode OLAP sangat penting yang diperlukan untuk banyak kasus bisnis sehari-hari dan saya sendiri setengah ilmuwan komputer dan setengah ahli statistik. Namun, jika Anda mencampur metode yang dijelaskan di atas dengan algoritma dari ilmu komputer untuk menskalakan metode tersebut hingga set data yang lebih besar dan juga membuang beberapa ide dari kecerdasan buatan, terutama dari bidang pembelajaran mesin, saya pribadi berpikir bahwa kemungkinan yang jauh lebih menarik dapat muncul. Ini sebenarnya bukan hal yang baru dan telah menjadi bidang penting untuk penelitian selama beberapa dekade terakhir.
+   
+   \paragraph{}  Metode dan algoritma yang telah dikembangkan selama ini benar-benar telah membentuk bidang penelitian baru yang lengkap di bawah \textit{data mining,} analisis prediktif, atau deteksi pola. Dan salah satu perkembangan yang paling menakjubkan adalah kumpulan metode yang tidak hanya dapat digunakan pada data terstruktur, yaitu, pada tabel, tetapi juga pada data tidak terstruktur seperti teks atau gambar. Ini yang telah mendasari motivasi untuk bidang-bidang seperti pertambangan teks, gambar pertambangan, atau audio pertambangan. 
+   
+   \paragraph{} Baru-baru ini kata kunci baru telah banyak digunakan: \textit{Big data}. Nah, itu artinya yang paling baru di tahun 2012 dan selanjutnya, jadi jika anda membaca buku ini di 2092, anda mungkin ingin menggunakan buku ini sebagai kuliah sejarah. OK, kembali ke Big data: apa yang begitu istimewa tentang itu,Jika anda bertanya pada saya, tidak jauh dari sudut pandang seorang data mining. \textit{Big data} adalah istilah umum untuk banyak ide dan teknologi, tetapi titik yang mendasari semua hal tersebut adalah big data harus mengenai infrastruktur dan metode untuk mengumpulkan, mengambil dan menganalisis banyaknya data yang terstruktur, tidak terstruktur, atau yang bersifat terstruktur. Nah, Jika Anda telah membaca \textit{paragraf }di atas anda pasti akan setuju bahwa ini sebenarnya terdengar seperti deskripsi yang sempurna dari \textit{“data mining“}. Pada 2013, \textit{Big data market }masih begitu awal dan banyak orang yang mengkhawatirkan tentang infrastruktur data. Namun hal ini akan berubah setelah organisasi memahami bahwa hanya pengumpulan data belaka tidak berarti apa-apa. Itu analisis data yang memberikan wawasan baru, menjelaskan pola-pola yang mendasari atau menciptakan model yang dapat mengekstrapolasi untuk memprediksi masa depan kemungkinan.
+   
+   \paragraph{}  Oleh karena itu, membaca buku ini mungkin merupakan ide yang sangat bagus untuk belajar lebih banyak tentang di mana dan bagaimana data pertambangan dapat digunakan untuk memberikan mereka wawasan. Itu juga mungkin dapat melayani anda untuk karir pribadi anda. Ingat, \textit{Big data market} pasti akan perlahan-lahan pindah kearah analitik di masa depan. Apa pun alasannya, saya berharap bahwa anda akan belajar lebih tentang penggunaan kasus-kasus yang dibahas dalam buku ini sehingga anda dapat mentransfernya ke masalah bisnis anda sendiri. \textit{RapidMiner} adalah alat yang sangat bagus dan sangat fleksibel untuk menggunakannya kembali gunakan kasus dan sesuaikan dengan masalah konkret anda. 
+
+\subsection{Pemodelan}
+
+\paragraph{} Setelah kami memiliki data mengenai pelanggan kami yang tersedia dalam format yang terstruktur dengan baik, kami akhirnya dapat mengganti nilai yang tidak diketahui dari atribut target kami dengan prediksi nilai yang paling mungkin dengan menggunakan metode\textit{ data maining}. Kami memiliki banyak metode yang tersedia di sini, banyak di antaranya, seperti halnya penalaran analogi yang dijelaskan di awal atau penghasil aturan praktis, didasarkan pada perilaku manusia. Kami menyebut penggunaan metode data maining \textbf{"to model"} dan hasil dari metode seperti itu, yaitu, instruksi prediksi, adalah sebuah \textbf{model}. Sama seperti data maining dapat digunakan untuk masalah yang berbeda, ini juga berlaku untuk model. Mereka dapat dengan mudah dipahami dan menjelaskan proses yang mendasarinya secara sederhana. Atau mereka dapat digunakan untuk prediksi dalam kasus yang tidak diketahui. Terkadang keduanya berlaku, seperti misalnya dengan model berikut ini, yang\textit{ dapat disediakan oleh metode} data maining untuk skenario kami.
+
+\paragraph{} “Jika pelanggan berasal dari daerah perkotaan, memiliki lebih dari 500 karyawan dan jika setidaknya 3 pembelian ditransaksikan dalam 1 kelompok produk , maka kemungkinan pelanggan ini tertarik pada produk baru itu tinggi.”
+
+\paragraph{}  Model seperti itu dapat dengan mudah dipahami dan dapat memberikan wawasan yang lebih dalam tentang data yang mendasari dan proses pengambilan keputusan pelanggan. Dan di samping itu, ini adalah model operasional, yaitu, model yang dapat digunakan secara langsung untuk membuat prediksi untuk pelanggan lebih lanjut. Perusahaan \textit{"Smith Paper}" misalnya memenuhi kondisi peraturan di atas dan oleh karena itu terikat untuk tertarik pada produk baru ini setidaknya ada kemungkinan besar. Karena itu tujuan Anda telah trcapai dan dengan menggunakan \textit{data mining}.
+
+\paragraph{}  Akan menghasilkan model yang dapat Anda gunakan untuk meningkatkan \textit{efisiensi} pemasaran Anda: Daripada hanya menghubungi semua pelanggan yang ada dan kandidat lainnya tanpa melihat, Anda sekarang dapat memusatkan upaya pemasaran Anda pada pelanggan yang menjanjikan dan karena itu akan memiliki tingkat keberhasilan yang jauh lebih tinggi dengan waktu yang lebih sedikit dan upaya anda bahkan bisa melangkah lebih jauh dan menganalisis saluran penjualan yang mungkin menghasilkan hasil terbaik dan untuk pelanggan.
+
+\paragraph{}  Dalam sisa buku ini kita akan fokus pada penggunaan lebih lanjut dari penambangan data dan pada saat yang sama praktik mentransfer konsep-konsep seperti pelanggan, proses bisnis, atau produk ke dalam atribut, contoh, dan kumpulan data. Ini akan melatih mata untuk mendeteksi kemungkinan aplikasi lebih lanjut secara luar biasa dan akan membuat kehidupan analis jauh lebih mudah di kemudian hari. Namun, pada bab berikutnya, kami ingin meluangkan sedikit waktu untuk RapidMiner dan memberikan pengantar kecil untuk penggunaannya, sehingga Anda dapat mengimplementasikan contoh-contoh berikut dengan segera
+
+
+
+
+
+\section{Rapidminer}
+\par \textit{RapidMiner} adalah sebuah lingkungan
+\textit{machine learning data mining, text mining} dan \textit{predictive analytics}.\cite{vercellis2009business}
+Salah satu software pilihan untuk melakukan ekstraksi data
+dengan metode-metode data mining.\cite{cti2017implemetasi}
+\paragraph{} \textit{RapidMiner} adalah aplikasi data mining berbasis open-source yang terkemuka dan
+ternama. Didalamnya terdapat aplikasi yang berdiri sendiri untuk analisis data dan sebagai
+mesin data mining seperti untuk loading data, transformasi data, pemodelan data, dan metode
+visualisasi data. RapidMiner akan dipasang pada Sistem Operasi MS Windows 7.\cite{yuda2014data}
+
+
+
