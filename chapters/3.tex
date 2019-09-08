@@ -2,3 +2,333 @@
 \subsection{Pengertian \textit{Naive Bayes Classifier}}
 \textit{Naive Bayes Classifier} merupakan salah satu metode klasifikasi probabilistik dan statistik yang dikemukakan oleh Thomas Bayes. Algoritma \textit{Naive Bayes} biasa digunakan untuk memprediksi peluang di masa depan dengan berdasarkan pengalaman di masa sebelumnya, biasanya disebut dengan Teorema \textit{Bayes}. 
 \textit{Naive Bayes} didasarkan pada asumsi penyederhanaan bahwa nilai atribut secara konditional saling bebas jika diberikan 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Algoritma Apriori}
+\subsection{Pengertian Algoritma Apriori}
+Algoritma apriori merupakan jenis aturan asosiasi pada data mining, dimana aturan yang menyatakan asosiasi antara atribut-atribut yang disebut \textit{market basket analysis} \cite{ye2006parallel}. \textit{Asosiation rule} adalah teknik data minig yang digunakan untuk menentukan atura asosiatif antar suatu kombinasi \textit{item}. Algoritma apriori yang bertujuan untuk menemukan \textit{frequent itemsets} pada sekumpulan data yang memenuhi syarat minimum \textit{support} dan minimum \textit{confidence} yang telah ditentukan.
+\par
+Algoritma Apriori menggunakan pengetahuan frekuensi atribut yang  sebelumnya telah didapat untuk dilakukan proses informasi selanjutnya. Pada algoritma Apriori  menentukan kandidat yang mungkin muncul dengan cara memperhatikan nilai minimum \textit{support} dan nilai minimum \textit{confidence}. \textit{Support} adalah nilai pengunjung atau persentase kombinasi sebuah \textit{item} dalam \textit{database}. Sedangkan \textit{confidence} adalah nilai kepastian yang menentukan kuatnya hubungan antar \textit{item} dalam sebuah Apriori. \textit{Confidence} dapat dicari setelah pola frekuensi munculnya sebuah \textit{item} ditemukan.
+
+
+\subsection{Kelebihan dan Kelemahan Algoritma Apriori}
+\par Beberapa kelebihan yang dimiliki oleh algoritma apriori adalah sebagai berikut \cite{fauzy2016penerapan}:
+ \begin{enumerate}
+\item Menghasilkan kombinasi yang sangat banyak sehingga sangat tidak efisien. 
+\item Lebih sederhana
+\item Dapat menangani data yang besar
+\item Apriori memiliki akurasi rules yang tinggi
+\end{enumerate}
+
+\par Beberapa kelemahan yang dimiliki oleh algoritma apriori adalah sebagai berikut:
+ \begin{enumerate}
+\item Proses \textit{scan database} yang dilakukan setiap kali iterasi, sehingga waktu yang diperlukan bertambah dengan makin banyak iterasi
+\item Proses \textit{scanning} yang
+dilakukan pada apriori yang berulang kali membuat tingkat kecepatan menjadi lambat
+
+\end{enumerate}
+
+\subsection{Tahap-Tahap Menghitung Algoritma Apriori}
+Tahap-tahap yang dilakukan untuk mendapatkan \textit{frequent itemset} dalam algoritma apriori adalah sebagai berikut \cite{triyanto2014association}:
+ \begin{enumerate}
+\item Penggabungan (\textit{Join})
+\par Proses penggabungan dilakukan dengan melakukan kombinasi terhadap satu \textit{item} dengan \textit{item} yang lainnya hingga tidak dapat terbentuk kombinasi lagi.
+\item Pemangkasan (Prune)
+\par proses pemangkasan merupakan hasil dari \textit{item} yang sudah dikombinasi kemudian dilakukan pemangkasan dengan menggunakan minimum \textit{support} yang telah ditentukan sebelumnya. 
+\end{enumerate}
+
+\par Prinsip-prinsip dalam algoritma apriori adalah sebagai berikut \cite{tampubolon2013implementasi}:
+ \begin{enumerate}
+\item Mengumpulkan \textit{item} tunggal kemudian mencari \textit{item} dengan nilai tersebar.
+\item Mendaptkan \textit{candidate pairs} kemudian menghitung \textit{large pairs} dari setiap \textit{item} yang ada
+\item Menemukan \textit{candidate triplets} dari setiap \textit{item} dan seterusnya
+\item Setiap \textit{subset} dari sebuah \textit{frequent itemset} harus menjadi \textit{frequent}.
+\end{enumerate}
+
+\pagebreak
+\par Algoritma apriori terbagi menjadi beberapa tahap yaitu iterasi (\textit{pass}). Setiap iterasi mnghasilkan sebuah pola frekuensi tinggi dengan panjang yang sama dimulai dari iterasi pertama yang menghasilkan pola frekuensi tinggi dengan panjang satu. Pada iterasi pertama, nilai \textit{support} dari setiap \textit{item} didapat, \textit{item} yang memiliki nilai \textit{support} lebih besar dari nilai minimum \textit{support} akan diambil sebagai pola frekuensi tinggi dengan panjang satu atau 1-\textit{itemset}. 1-i artinya satu set yang terdiri dari k \textit{item}. Kemuidan untuk kandidat 2-\textit{itemset} akan dihitung nilai \textit{support}-nya dengan melakukan \textit{scan} terhadap \textit{database}.
+\par
+\textit{Support} yang diamksudkan disini artinya jumlah transaksi pada \textit{database} yang mengandung keduan \textit{item} dalam kandidat 2-\textit{itemset}. Setelah nilai \textit{support} dari semua kandidat 2-\textit{itemset} didapat, kandidat 2-\textit{itemset} yang memenuhi syarat nilai minimum \textit{support} dapat ditetapkan sebagai 2-\textit{itemset} yang merupakan pola frekuensi tinggi dengan panjang 2 \cite{nursikuwagus2016implementasi}.
+\par
+Untuk iterasi ke-k dapat dibagi menjadi beberapa bagian:
+ \begin{enumerate}
+\item Pembentukan kandidat \textit{itemset}.
+\par Kandidat k-\textit{itemset} dibentuk dari kombinasi (k-1)-\textit{itemset} yang didapat dari iterasi sebelumnya. Karakteristik dari algoritma apriori adalah adanya pemangkaan terhadap kandidat k-iterasi yang subsetnya berisikan k-1 \textit{item} tidak termasuk kedalam pola frekuensi tinggi dengan panjang k-1.
+\item Perhitungan nilai \textit{support} dari setiap kandidat k-\textit{itemset}.
+\par Nilai \textit{support} dari setiap kandidat k-\textit{itemset} didapt dengan melakukan \textit{scan} terhadap \textit{database} untuk menghitung jumlah transaksi yang memuat seluruh \textit{item} didalam kandidat k-\textit{itemset} tersebut. Ini merupakan karakteristik dari algoritma ini dimana diperlukan perhitungn dengan melakukan \textit{scan} seluruh \textit{database} sebanyak k-\textit{itemset} terpanjang.
+\item Menetapkan pola frekuensi tinggi.
+
+\par 
+Pola frekuensi tinggi yang memuat k \textit{item} atau k-\textit{itemset} ditetapkan dari kandidat k-\textit{itemset} yang nilai \textit{support}-nya lebih besar dari nilai minimum \textit{support} yang telah ditetapkan sebelumnya.
+\item Apabila tidak mendapatkan pola frekuensi tinggi yang baru, maka semua proses berhenti. Bila tidak, makan k ditambah satu dan kembali ke bagian awal.
+\end{enumerate}
+.
+\\
+\\
+\\
+\\
+\\
+\\
+\subsection{Rumus Algoritma Apriori}
+\par Algoritma apriori menggunakan pengetahuan frekuensi atribut yang telah diketahui untuk selanjut dilakukan proses informai selanjutnya. Algoritma apriori melakukan penentuan kandidat yang mungkin muncul dengan cara memerhatikan nilai  minimum \textit{support} dan \textit{confidence} yang telah ditentukan sebelumnya \cite{yanto2015implementasi}.
+
+\par 
+\textbf{\textit{Support}}: sebuah ukuran yang menunjukkan besarnya tingkat dominasi sebuah \textit{item} atau \textit{itemset} dari keseluruhan transaksi. Ukuran ini akan menentukan kelayakan sebuah \textit{itemset} atau \textit{item} untuk dihitung nilai \textit{confidence} tersebut dapat digunakan untuk menentukan tingkat dminasi \textit{item} tunggal. Misalnya, semua tranaksi yang tersedia, berapa besar tingkat dominasi yang menunjukkan bahwa \textit{item} A \& B dibeli secara bersamaan.
+\par
+\textbf{\textit{Confidence}}: sebuahukuran yang menunjukkan hubungan antara kedua \textit{itemset} secara \textit{conditional}. Misalnya, seberapa sering \textit{item} B dibeli jika pelanggan membeli \textit{item} A.
+
+\par
+Nilai \textit{support} merupakan sebuah nilai presentase dari kombinasi sebuah \textit{item} didalam \textit{database}.
+Rumusnya:
+\begin{equation}
+    Support A =\frac{Jumlah Transaksi Mengandung A}{Jumlah Transaksi} 
+\end{equation}
+\par
+Sedangkan, Nilai \textit{confidence} adalah sebuah nilai yang pasti yaitu nilai kuatnya suatu hubungan antara \textit{item-item} dalam sebuah apriori. \textit{Confidence} didapat setelah pola frekuensi munculnya item telah ditemukan. Rumus untuk menghitung \textit{confidence}:
+\par
+Contohnya ditentukan aturan A - B maka:
+ \begin{equation}
+    Support (A,B) =\frac{Jumlah Transaksi Mengandung A dan B}{Jumlah Transaksi} 
+\end{equation}
+.
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\subsection{Contoh Soal Algoritma Apriori}
+Diketahui telah terjadi transaksi permintaan pengadan barang sebanyak 12 kali, dan jenis item yang dibeli adalah PC, CPU, Speaker, Wifi, CCTV, AC dan Proyektor. Tentukan seberapa sering sebuah \textit{project} meminta produk untuk diadakan pada Divisi \textit{Procurement} dalam penentuan pola pengadaan barang.Untuk penyelesaiannya adalah sebagai berikut:
+
+\subsubsection{Data Transaksi Permintaan Pengadaan Barang}
+Berdasarkan data transaksi divisi \textit{Procurement} PT. Cinovasi Rekaprima pada periode Januari dan Desember 2018 dilakukan akumulasi data transaksi permintaan pengadaan barang yang di rekap berdasarkan \textit{quotation} dapat dilihat pada Tabel VI.1 sebagai berikut :
+\begin{table}[!h]
+\caption{Pola Transaksi Permintaan Pengadaan Barang}
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+No & \begin{tabular}[c]{@{}l@{}}Nama Project\end{tabular} & Nama Produk                 \\ \hline
+1  & P1                                                      & PC,CPU,CCTV,AC              \\ \hline
+2  & P2                                                      & PC,CPU                      \\ \hline
+3  & P3                                                      & PC,CPU,Speaker,Wifi,CCTV,   \\ \hline
+4  & P4                                                      & CCTV,AC,Proyektor           \\ \hline
+5  & P5                                                      & PC,CPU,Speaker,Wifi         \\ \hline
+6  & P6                                                      & Speaker,Wifi                \\ \hline
+7  & P7                                                      & PC,CPU,TV,CCTV,             \\ \hline
+8  & P8                                                      & PC,Speaker,Wifi,Proyektor   \\ \hline
+9  & P9                                                      & Speaker,Wifi,CCTV,Proyektor \\ \hline
+10 & P10                                                     & PC,CPU,Speaker,Wifi         \\ \hline
+11 & P11                                                     & PC,TV                       \\ \hline
+12 & P12                                                     & PC,CPU,AC                   \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\pagebreak
+\subsubsection{Tabulasi Data Transaksi}
+Pada data transaksi permintaan pengadaan barang di bentuk tabel tabular yang akan mempermudah dalam mengetahui berapa banyak \textit{item} yang ada diminta dalam setiap transaksi seperti pada Tabel VI.2 berikut:
+\begin{table}[!h]
+\caption{Pola Transaksi Permintaan Pengadaan Barang}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline
+             & \multicolumn{8}{l|}{Nama Produk}                       \\ \hline
+Nama Project & PC & CPU & Speaker & Wifi & TV & CCTV & AC & Proyektor \\ \hline
+P1           & 1  & 1   & 0       & 0    & 0  & 1    & 1  & 0         \\ \hline
+P2           & 1  & 1   & 1       & 1    & 0  & 1    & 0  & 0         \\ \hline
+P3           & 1  & 1   & 1       & 0    & 1  & 0    & 0  & 0         \\ \hline
+P4           & 0  & 0   & 0       & 0    & 0  & 1    & 1  & 1         \\ \hline
+P5           & 1  & 1   & 1       & 1    & 0  & 0    & 0  & 0         \\ \hline
+P6           & 0  & 0   & 1       & 1    & 0  & 0    & 0  & 0         \\ \hline
+P7           & 1  & 1   & 0       & 0    & 1  & 1    & 0  & 0         \\ \hline
+P8           & 1  & 0   & 1       & 1    & 0  & 0    & 0  & 1         \\ \hline
+P9           & 0  & 0   & 1       & 1    & 0  & 1    & 0  & 1         \\ \hline
+P10          & 1  & 1   & 1       & 1    & 0  & 0    & 0  & 0         \\ \hline
+P11          & 1  & 0   & 0       & 0    & 1  & 0    & 0  & 0         \\ \hline
+P12          & 1  & 1   & 0       & 0    & 0  & 0    & 1  & 0         \\ \hline
+jumlah       & 9  & 7   & 7       & 6    & 3  & 5    & 3  & 3         \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[!h]
+\caption{Tabel Inisialisasi Data Barang}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Produk  & Inisial & Produk    & Inisial \\ \hline
+PC      & K       & TV        & S       \\ \hline
+CPU     & M       & CCTV      & A       \\ \hline
+Speaker & R       & AC        & T       \\ \hline
+Wifi    & L       & Proyektor & G       \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\pagebreak
+\subsubsection{Pembentukan \textit{Itemset}}
+\par Dalam perhitungan algoritma apriori untuk menentukan pola pengadaan barang ini ditentukan  nilai minimum \textit{support} dan minimum \textit{confidence}. Jumlah minimum \textit{support} adalah 40\% dan minimum \textit{confidence} adalah 60\%.
+Nilai minimum \textit{support} yang terlalu besar menyebabkan jumlah kombinasi \textit{itemset} yang akan memenuhi minimum \textit{support} sedikit bahkan tidak \textit{item} yang mencapai minimum \textit{support}.
+\par
+Pembentukan confidance pun tidak dapat dihitung karena tidak ada \textit{item} yang memenuhi minimum \textit{support} dan menyebabkan proses perhitungan selesai pada pembentukan \textit{support}. Oleh karena itu penentuan nilai minimum \textit{support} mengambil nilai tengah dimana minimum \textit{support}  40\% dan minimum \textit{confidence} 60\% dari total 100\% agar \textit{itemset} yang dikombinasi dapat memenuhi nilai minimum.
+Nilai minimum \textit{confidance} lebih besar dibandignkan minimum \textit{support}, karena dalam perhitungan \textit{confidance} akan menyaring \textit{itemset} teretntu untuk dilakukan pembentukan aturan asosiasi.
+
+\begin{enumerate}
+\item Kombinasi 1 \textit{Itemset}
+\par Berikut ini merupakan proses pembentukan C1 atau disebut dengan kombinasi 1 \textit{itemset} dengan jumlah minimum \textit{support} = 40\%. Maka, hasil pembentukan kombinasi 1 \textit{itemset} dengan  adalah sebagai berikut :
+
+\begin{equation}
+    Support A =\frac{Jumlah Transaksi Mengandung A}{Jumlah Transaksi} 
+    \end{equation}
+
+\begin{table}[!h]
+\caption{Minimum Support dari 1 Itemset}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+1 itemset & Jumlah & support & support (\%) \\ \hline
+K         & 9      & 0.75    & 75\%         \\ \hline
+M         & 7      & 0.58    & 58\%         \\ \hline
+R         & 7      & 0.58    & 58\%         \\ \hline
+L         & 6      & 0.5     & 50\%         \\ \hline
+S         & 3      & 0.25    & 25\%         \\ \hline
+A         & 5      & 0.42    & 42\%         \\ \hline
+T         & 3      & 0.25    & 25\%         \\ \hline
+G         & 3      & 0.25    & 25\%         \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\par Dari proses pembentukan \textit{itemset} dengan minimum \textit{support} 40\% dapat diketahui yang memenuhi standar minimum \textit{support} yaitu pada PC dan CPU dan Speaker, Wifi. Kemudian dari hasil pembentukan 1 \textit{itemset} akan dilakukan kombinasi 2 \textit{itemset}.
+
+\pagebreak
+\item Kombinasi  2 \textit{Itemset}
+\par Berikut ini merupakan pembentukan 2 itemset berdasarkan data kombinasi 1 \textit{itemset}  yang memenuhi standar minimum \textit{support} yang sudah disediakan pada Tabel VI.4 diatas. Proses pembentukan C2 atau disebut dengan 2 \textit{itemset} dengan jumlah minimum \textit{support} = 40\% Dapat diselesaikan dengan rumus berikut:
+
+\begin{equation}
+Support (A,B) =\frac{Jumlah Transaksi Mengandung A dan B}{Jumlah Transaksi} 
+\end{equation} 
+
+\begin{table}[!ht]
+\caption{Support Kombinasi 2 Itemset}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+2 itemset & jumlah & support & support (\%) \\ \hline
+K,M       & 7      & 0.58    & 58\%         \\ \hline
+K,R       & 4      & 0.33    & 33\%         \\ \hline
+K,L       & 3      & 0.25    & 25\%         \\ \hline
+K,A       & 2      & 0.17    & 17\%         \\ \hline
+M,R       & 4      & 0.33    & 33\%         \\ \hline
+M,L       & 3      & 0.25    & 25\%         \\ \hline
+M,A       & 3      & 0.25    & 25\%         \\ \hline
+R,L       & 6      & 0.50    & 50\%         \\ \hline
+R,A       & 2      & 0.17    & 17\%         \\ \hline
+L,A       & 2      & 0.17    & 17\%         \\ \hline
+\end{tabular}
+\end{table}
+
+\par Dari proses pembentukan \textit{itemset} pada dengan minimum \textit{support} 40\% dapat diketahui yang memenuhi standar minimum \textit{support} yaitu pada  PC, CPU, Speaker, Wifi, dan CCTV. Kemudian dari hasil pembentukan 2 \textit{itemset} akan dilakukan kombinasi 3 \textit{itemset}.
+
+\pagebreak
+\item Kombinasi 3 \textit{Itemset}
+\par Berikut ini merupakan pembentukan  \textit{itemset} berdasarkan data kombinasi 2 \textit{itemset}  yang memenuhi standar minimum \textit{support} yang sudah disediakan pada Tabel VI.5 diatas. Proses pembentukan C3 atau disebut dengan 3 \textit{itemset} dengan jumlah minimum \textit{support} = 40\% Dapat diselesaikan dengan rumus berikut:
+\begin{equation}
+Support (A,B,C) =\frac{Jumlah Transaksi Mengandung A,B dan C}{Jumlah Transaksi} 
+\end{equation}
+\begin{table}[!ht]
+\caption{Support Kombinasi 3 Itemset}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+3 itemset & Jumlah & support & support (\%) \\ \hline
+KMR       & 4      & 0.33    & 33\%         \\ \hline
+KML       & 2      & 0.17    & 17\%         \\ \hline
+MRL       & 3      & 0.25    & 25\%         \\ \hline
+KRL       & 3      & 0.25    & 25\%         \\ \hline
+\end{tabular}
+\end{table}
+
+\par Dari kombinasi 3 \textit{itemset} dengan minimum \textit{support} 40\% dapat diketahui kombinasi 3 \textit{itemset} yang memenuhi standar minimum \textit{support} adalah Wifi, Proyektor, Speaker, AC dan CCTV dengan nilai \textit{support} sebesar 42\% . Karena Kombinasi 3 \textit{itemset} tidak ada yang memenuhi minimal \textit{support} 40\%, maka kombinasi 3 \textit{itemset} yang memenuhi untuk pembentukan asosiasi.
+\end{enumerate}
+
+\subsection{Pembentukan Confidance}
+\par Setelah semua pola frekuensi tinggi ditemukan, kemudian dicari aturan asosiasi yang memenuhi syarat minimum untuk \textit{confidence} dengan menghitung \textit{confidence} aturan asosiatif A-B . 
+\par Minimum \textit{Confidence} = 60\% 
+\par Nilai \textit{Confidence} dari aturan A-B diperoleh :
+\begin{equation}
+Confidence = P(B|A) =\frac{Jumlah Transaksi Mengandung A dan B}{Jumlah Transaksi Mengandung A} 
+\end{equation}
+\par Pada tabel berikut menunjukan itemset 2 yang telah dihitung nilai \textit{confidence} dan telah diseleksi oleh minimal \textit{confidence} adalah 60\%.
+\begin{table}[!ht]
+\caption{Support Kombinasi 3 Itemset}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+2Itemset & jumlah & confidance & confidance (\%) \\ \hline
+K,M      & 5/9    & 0.78       & 78\%            \\ \hline
+R,L      & 5/7    & 0.86       & 86\%            \\ \hline
+\end{tabular}
+\end{table}
+
+\par Pada tabel berikut menunjukan \textit{itemset} 3 yang telah dihitung nilai \textit{confidence} dan telah diseleksi oleh minimal \textit{confidence} 60\%.
+\begin{table}[!ht]
+\caption{Confidance Kombinasi 3 Itemset}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+3Itemset & jumlah & confidance & confidance (\%) \\ \hline
+KMR      & 4      & 0.44       & 44\%            \\ \hline
+KML      & 3      & 0.33       & 33\%            \\ \hline
+RLK      & 4      & 0.57       & 57\%            \\ \hline
+RLM      & 3      & 0.43       & 43\%            \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Pembentukan Aturan Asosiasi}
+\par Berikut ini merupakan tabel \textit{association rule}, dimana \textit{support} dan \textit{confidence} dari masing – masing \textit{itemset} dikalikan agar dapat mengetahui mana \textit{association rule} yang paling besar nilanya. Dikarenakan Batasan \textit{final association rule} yang ditentukan hanya 2, maka aturan yang diambil hanya 2 aturan tertinggi seperti yang ada pada tbael berikut:
+\begin{table}[!ht]
+\caption{Pembentukan Aturan Asosiasi Kombinasi 2 Itemset}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+2 itemset                                       & support & confidance & sxc\\ \hline
+Jika membeli Kursi, maka akan membeli Meja      & 58\%    & 78\%       & 45.4\%               \\ \hline
+Jika membeli Rak Buku, maka akan membeli Lemari & 50\%    & 86\%       & 42.9\%               \\ \hline
+\end{tabular}
+\end{table}
+
+\par Jadi, hadil dari pembentukan aturan asosiasi ini akan diketahui pola pengadaan barang dari transaksi permintaan pengadaan barang. Hal ini dapat dijadi sebagai rekomendasi produk dalam proses pengaan barang
+
+\subsection{Referensi}
